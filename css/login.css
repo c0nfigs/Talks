@@ -211,40 +211,8 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-    .container {
-        width: 100%;
-        border-radius: 0;
-        box-shadow: none;
-        max-width: none;
-    }
-
-    .form-container {
-        width: 100%;
-    }
-
-    .toggle-container {
-        left: 0;
-        width: 100%;
-        border-radius: 0;
-    }
-
-    .toggle {
-        width: 100%;
-    }
-
-    .toggle-panel {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .toggle-left,
-    .toggle-right {
-        transform: translateX(0);
-    }
     
-    .container.active .toggle-container {
-        transform: translateX(0);
-    }
+
 
     /* Redimensionamento de texto e espaçamento */
     .container p {
