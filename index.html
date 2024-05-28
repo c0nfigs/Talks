@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="form-signup">
+                <h1>Crie sua Conta</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use seu email para se registrar</span>
+                <input type="text" placeholder="Novo Usuário" id="newUser">
+                <input type="password" placeholder="Nova Senha" id="newPassword">
+                <button id="btnSignup" type="button">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="form-login">
+                <h1>Entrar</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>Ou use seu email e senha</span>
+                <input type="text" placeholder="Usuário" id="user">
+                <input type="password" placeholder="Senha" id="password">
+                <a href="#">Esqueceu a senha?</a>
+                <button id="btnLogin" type="button">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="userList" style="display: none;">
+        <h1>Lista de Usuários Registrados</h1>
+        <ul id="registeredUsers"></ul>
+        <button id="deleteUsers">Deletar Todos os Usuários</button>
+        <button id="logoutBtn">Sair</button>
+    </div>
+
+    <div class="mobile-buttons">
+        <button id="mobile-signin">Sign In</button>
+        <button id="mobile-signup">Sign Up</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
