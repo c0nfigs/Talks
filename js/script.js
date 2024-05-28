@@ -10,9 +10,12 @@ const fieldUser = document.querySelector('#user');
 const fieldPassword = document.querySelector('#password');
 const formLogin = document.querySelector("#form-login");
 const logoutBtn = document.getElementById('logoutBtn');
-const userList = document.getElementById('userList');
 const mobileSigninBtn = document.getElementById('mobile-signin');
 const mobileSignupBtn = document.getElementById('mobile-signup');
+const userList = document.getElementById('userList');
+const registeredUsers = document.getElementById('registeredUsers');
+const deleteUsersBtn = document.getElementById('deleteUsers');
+
 
 //SignUp
 function storeUser(username, password) {
@@ -95,25 +98,34 @@ btnLogin.addEventListener('click', (e) => {
     login();
 });
 
-logoutBtn.addEventListener('click', logout);
-
-function showUserList() {
+function loadRegisteredUsers() {
+    registeredUsers.innerHTML = '';
     const users = JSON.parse(localStorage.getItem('users')) || [];
-    const userListElement = document.getElementById('registeredUsers');
-    userListElement.innerHTML = '';
     users.forEach(user => {
         const li = document.createElement('li');
-        li.textContent = user.username;
-        userListElement.appendChild(li);
+        li.textContent = `Usuário: ${user.username}, Senha: ${user.password}`;
+        registeredUsers.appendChild(li);
     });
-    userList.style.display = 'block';
-    container.style.display = 'none';
 }
 
-mobileSigninBtn.addEventListener('click', () => {
-    container.classList.remove('active');
-});
+function deleteAllUsers() {
+    localStorage.removeItem('users');
+    loadRegisteredUsers();
+}
 
-mobileSignupBtn.addEventListener('click', () => {
-    container.classList.add('active');
-});
+function showUserList() {
+    userList.style.display = 'block';
+    document.getElementById('container').style.display = 'none';
+    loadRegisteredUsers();
+}
+
+function logout() {
+    userList.style.display = 'none';
+    document.getElementById('container').style.display = 'block';
+}
+
+deleteUsersBtn.addEventListener('click', deleteAllUsers);
+logoutBtn.addEventListener('click', logout);
+
+logoutBtn.addEventListener('click', logout);
+
