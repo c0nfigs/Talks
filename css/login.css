@@ -20,7 +20,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 90%; /* Alterado para 90% para uma aparência mais responsiva */
+    width: 90%;
     max-width: 768px;
     min-height: 480px;
 }
@@ -55,7 +55,7 @@ body {
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Adicionada transição suave para a cor de fundo */
+    transition: background-color 0.3s ease;
 }
 
 .container button.hidden {
@@ -161,7 +161,6 @@ body {
 .toggle {
     background-color: #fc6a6a;
     height: 100%;
-   
     color: #000000;
     position: relative;
     left: -100%;
