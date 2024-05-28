@@ -12,7 +12,6 @@ body {
     justify-content: center;
     flex-direction: column;
     height: 100vh;
-    padding: 10px; /* Adicionado para dar algum espaçamento em telas pequenas */
 }
 
 .container {
@@ -21,10 +20,9 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 100%; /* Alterado para 100% para ocupar toda a largura da tela */
+    width: 90%; /* Alterado para 90% para uma aparência mais responsiva */
     max-width: 768px;
     min-height: 480px;
-    transition: all 0.3s ease-in-out; /* Adicionada transição suave para mudanças de layout */
 }
 
 .container p {
@@ -57,7 +55,7 @@ body {
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Adicionada transição suave para a cor de fundo */
 }
 
 .container button.hidden {
@@ -71,7 +69,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 20px; /* Reduzido o padding para telas pequenas */
+    padding: 0 40px;
     height: 100%;
 }
 
@@ -163,6 +161,7 @@ body {
 .toggle {
     background-color: #fc6a6a;
     height: 100%;
+   
     color: #000000;
     position: relative;
     left: -100%;
@@ -208,25 +207,6 @@ body {
     transform: translateX(200%);
 }
 
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; 
-        min-height: 600px; 
-    }
-
-    .sign-in, .sign-up {
-        width: 100%; 
-        position: relative; 
-        opacity: 1; 
-        transform: translateX(0); 
-    }
-
-    .container.active .sign-in, .container.active .sign-up {
-        transform: translateX(0); 
-    }
-
-    .toggle-container {
-        display: none; 
-    }
+.register {
+    color: black;
 }
