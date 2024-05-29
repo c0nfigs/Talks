@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Header*/
 .search-input {
     background-image: url('/img/search.png');
     background-repeat: no-repeat;
-    padding-left: 30px; /* Ajuste conforme necessário para sua imagem */
+    padding-left: 30px; /* Ajustar o padding para a imagem não ficar colada no texto */
     background-position: left center; 
     background-size: 16px; /* Diminuir a imagem */
     border-radius: 15px; /* Ajustar a borda */
     width: 20vh;
-    height: 4vh; /* Ajuste conforme necessário para a altura desejada */
+    height: 4vh; /* Ajustar a altura */
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -56,3 +59,5 @@ header {
     color: #fd2b2b;
     text-decoration: none;
 }
+
+/*SideBar*/
