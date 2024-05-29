@@ -1,6 +1,7 @@
 const userList = document.getElementById('userList');
 const registeredUsers = document.getElementById('registeredUsers');
 const deleteUsersBtn = document.getElementById('deleteUsers');
+const logoutBtn = document.getElementById('logoutBtn');
 
 function loadRegisteredUsers() {
     registeredUsers.innerHTML = '';
@@ -23,4 +24,10 @@ function showUserList() {
     loadRegisteredUsers();
 }
 
+function logout() {
+    userList.style.display = 'none';
+    document.getElementById('container').style.display = 'block';
+}
+
 deleteUsersBtn.addEventListener('click', deleteAllUsers);
+logoutBtn.addEventListener('click', logout);

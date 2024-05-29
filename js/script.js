@@ -1,3 +1,4 @@
+// Cache DOM elements for performance
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
@@ -16,6 +17,9 @@ const userList = document.getElementById('userList');
 const registeredUsers = document.getElementById('registeredUsers');
 const deleteUsersBtn = document.getElementById('deleteUsers');
 
+function toggleDisplay(element, state) {
+    element.style.display = state;
+}
 
 //SignUp
 function storeUser(username, password) {
@@ -69,11 +73,6 @@ function resetFormLogin() {
     formLogin.reset();
 }
 
-function logout() {
-    userList.style.display = 'none';
-    container.style.display = 'block';
-}
-
 async function login() {
     const username = fieldUser.value;
     const password = fieldPassword.value;
@@ -114,18 +113,10 @@ function deleteAllUsers() {
 }
 
 function showUserList() {
-    userList.style.display = 'block';
-    document.getElementById('container').style.display = 'none';
+    toggleDisplay(userList, 'block');
+    toggleDisplay(container, 'none');
     loadRegisteredUsers();
-}
-
-function logout() {
-    userList.style.display = 'none';
-    document.getElementById('container').style.display = 'block';
 }
 
 deleteUsersBtn.addEventListener('click', deleteAllUsers);
 logoutBtn.addEventListener('click', logout);
-
-logoutBtn.addEventListener('click', logout);
-
