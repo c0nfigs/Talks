@@ -10,19 +10,12 @@ const btnLogin = document.querySelector('#btnLogin');
 const fieldUser = document.querySelector('#user');
 const fieldPassword = document.querySelector('#password');
 const formLogin = document.querySelector("#form-login");
-const logoutBtn = document.getElementById('logoutBtn');
-const mobileSigninBtn = document.getElementById('mobile-signin');
-const mobileSignupBtn = document.getElementById('mobile-signup');
-const userList = document.getElementById('userList');
-const registeredUsers = document.getElementById('registeredUsers');
-const deleteUsersBtn = document.getElementById('deleteUsers');
-const isUserLoggedIn = document.querySelector('#usuario-logado');
 
 function toggleDisplay(element, state) {
     element.style.display = state;
 }
 
-//SignUp
+// SignUp
 function storeUser(username, password) {
     const users = JSON.parse(localStorage.getItem('users')) || [];
     users.push({ username, password });
@@ -62,7 +55,7 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-//SignIn
+// SignIn
 function userIsAuthenticated() {
     const username = fieldUser.value;
     const password = fieldPassword.value;
@@ -86,7 +79,7 @@ async function login() {
         localStorage.setItem('user', username);
         resetFormLogin();
         alert("Login bem sucedido");
-        window.location.href = "pages/principal.html"; // Caminho atualizado
+        window.location.href = 'pages/principal.html';
     } else {
         localStorage.removeItem('user');
         resetFormLogin();
@@ -99,26 +92,3 @@ btnLogin.addEventListener('click', (e) => {
     login();
 });
 
-function loadRegisteredUsers() {
-    registeredUsers.innerHTML = '';
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    users.forEach(user => {
-        const li = document.createElement('li');
-        li.textContent = `Usuário: ${user.username}, Senha: ${user.password}`;
-        registeredUsers.appendChild(li);
-    });
-}
-
-function deleteAllUsers() {
-    localStorage.removeItem('users');
-    loadRegisteredUsers();
-}
-
-function showUserList() {
-    toggleDisplay(userList, 'block');
-    toggleDisplay(container, 'none');
-    loadRegisteredUsers();
-}
-
-deleteUsersBtn.addEventListener('click', deleteAllUsers);
-logoutBtn.addEventListener('click', logout);

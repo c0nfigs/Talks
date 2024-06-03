@@ -4,7 +4,7 @@ const toggleDarkLight = document.getElementById('toggleDarkLight');
 const body = document.body;
 const logoImg = document.querySelector('.sidebar .logo img');
 const isUserLoggedIn = document.getElementById('usuarioLogado');
-const logoutButton = document.querySelector('.bottom-menu .bx-log-out-circle');
+const logoutButton = document.querySelector('.bx-log-out-circle');
 
 // Handle sidebar hover to expand and collapse
 sidebar.addEventListener('mouseenter', () => {
@@ -30,20 +30,20 @@ function updateMode() {
     }
 }
 
-function isAutenticated() {
+function isAuthenticated() {
     if (!localStorage.getItem('user')) {
-        window.location.href = "index.html";
+        window.location.href = "../index.html"; // Caminho atualizado
     }
 }
 
 function init() {
-    isAutenticated();
+    isAuthenticated();
     isUserLoggedIn.innerHTML = `Olá, ${localStorage.getItem('user')}`;
 }
 
 logoutButton.addEventListener('click', () => {
     localStorage.removeItem('user');
-    window.location.href = "../index.html"; // Atualizado para apontar para o index.html fora do diretório pages
+    window.location.href = "../index.html"; // Caminho atualizado
 });
 
 init();
