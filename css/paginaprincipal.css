@@ -1,6 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --background-color-light: #ffffff;
+    --background-color-dark: #181a1e;
+    --text-color-light: #000000;
+    --text-color-dark: #fbfbfb;
+    --sidebar-background-light: #ffffff;
+    --sidebar-background-dark: #000000;
+    --header-background-light: #ffffff;
+    --header-background-dark: #25252c;
+    --icon-color-light: #000000;
+    --icon-color-dark: #fbfbfb;
+    --input-background-light: #ffffff;
+    --input-background-dark: #25252c;
+    --button-background-light: #ff2525;
+    --button-background-dark: #ff2525;
+    --button-hover-background-light: #ff6b6b;
+    --button-hover-background-dark: #ff6b6b;
+    --sidebar-hover-background-light: #f0f0f0;
+    --sidebar-hover-background-dark: #3a3a3a;
+    --sidebar-active-background-light: #fbfbfb;
+    --sidebar-active-background-dark: #25252c;
+    --sidebar-border-color-light: #000000;
+    --sidebar-border-color-dark: #ffffff;
+}
+
+body {
+    font-family: 'Arimo', sans-serif;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark{
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+
 /* Header */
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra */
+    transition: background-color 0.3s;
+}
+
+
+
 .search-input {
     background-image: url('/img/search.png');
     background-repeat: no-repeat;
@@ -20,35 +75,20 @@
     text-align: left; /* Alinhar o texto à esquerda */
 }
 
-header {
-    background-color: #ffffff;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra */
-}
 
-#EntrarBtn {
+
+#usuarioLogado {
     position:absolute;
     right: 2vh;
     padding: 8px 16px;
     border: none;
-    border-radius: 15px;
-    background-color: #ff2525;
-    color: #ffffff;
+    color: #000000;
     font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+  
 }
 
-#EntrarBtn:hover {
-    background-color: #ff6b6b;
-}
+
 
 .icon {
     position: absolute;
@@ -90,8 +130,8 @@ li {
 }
 
 body.dark {
-    --light: #181a1e;
-    --grey: #25252c;
+    --light: #000000;
+    --grey: #000000;
     --dark: #fbfbfb;
 }
 
@@ -104,19 +144,21 @@ body {
     position: fixed;
     top: 5px;
     left: 0;
-    background-color: white;
-    width: 160px; /* Largura inicial */
+    background-color: var(--sidebar-background-light);
+    width: 80px;
     height: 100%;
     z-index: 2;
     overflow-x: hidden;
     scrollbar-width: none;
-    box-shadow: 0 2px 0 6rem rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 2px 0 6rem rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 16px;
-    transition: width 0.3s ease; /* Transição para o efeito de abrir/fechar */
+    font-size: 24px;
+    transition: width 0.3s ease, background-color 0.3s;
 }
+
+
 
 .sidebar:hover {
     width: 260px; /* Largura completa ao passar o mouse */
@@ -140,7 +182,7 @@ body {
     width: 75%;
     margin: 0 10px;
     position: absolute;
-    top: 5%;
+    top: 6.25%;
     display: none; /* Esconder logo por padrão */
 }
 
@@ -165,7 +207,7 @@ body {
 
 .sidebar .side-menu li.active,
 .sidebar .bottom-menu li.active {
-    border-left: #181a1e 6px solid;
+    border-left: #000000 6px solid;
     background: var(--dark);
     transition: all 0.3s ease-in;
 }
@@ -205,8 +247,14 @@ body {
     border: 1px solid #000; /* Borda ao passar o mouse */
 }
 
+body.dark .sidebar .side-menu li a:hover,
+.sidebar .bottom-menu li a:hover {
+    background-color: #ffffff; /* Cor de fundo ao passar o mouse */
+    border: 1px solid #ffffff; /* Borda ao passar o mouse */
+}
+
 .sidebar .bottom-menu {
-    margin-top: 25%;
+    margin-top: 10%;
     padding: 0 10px;
 }
 
@@ -234,5 +282,5 @@ body {
 }
 
 .sidebar .side-menu li a {
-    font-size: 12px;
+    font-size: 16px;
 }

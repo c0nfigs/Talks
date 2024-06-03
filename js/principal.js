@@ -3,6 +3,7 @@ const sidebar = document.querySelector('.sidebar');
 const toggleDarkLight = document.getElementById('toggleDarkLight');
 const body = document.body;
 const logoImg = document.querySelector('.sidebar .logo img');
+const isUserLoggedIn = document.getElementById('usuariologado')
 
 // Handle sidebar hover to expand and collapse
 sidebar.addEventListener('mouseenter', () => {
@@ -28,9 +29,19 @@ function updateMode() {
     }
 }
 
+function isAutenticated() {
+    if (!localStorage.getItem('user')) {
+        window.location.href = "index.html"
+    }
+}
+
+function init() {
+    nextID = findNextId()
+    isUserLoggedIn.innerHTML = `Bem vindo, ${localStorage.getItem('user')}`
+}
+
+init()
 updateMode();
 
-function myteste(){
-    console.log("teste");
-}
+
 /*/ Path: js/principal.js */
