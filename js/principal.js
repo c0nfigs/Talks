@@ -29,3 +29,8 @@ function updateMode() {
 }
 
 updateMode();
+
+function myteste(){
+    console.log("teste");
+}
+/*/ Path: js/principal.js */
