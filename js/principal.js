@@ -15,20 +15,17 @@ sidebar.addEventListener('mouseleave', () => {
     logoImg.style.display = 'none';
 });
 
-// Toggle dark/light mode
 toggleDarkLight.addEventListener('click', () => {
     body.classList.toggle('dark');
     updateMode();
 });
 
-// Update mode text and icon
 function updateMode() {
     if (body.classList.contains('dark')) {
-        toggleDarkLight.innerHTML = '<i class="bx bx-sun"></i> Light Mode';
+        toggleDarkLight.innerHTML = '<i class="bx bx-sun"></i><span>Light Mode</span>';
     } else {
-        toggleDarkLight.innerHTML = '<i class="bx bx-moon"></i> Dark Mode';
+        toggleDarkLight.innerHTML = '<i class="bx bx-moon"></i><span>Dark Mode</span>';
     }
 }
 
-// Initialize mode on page load
 updateMode();

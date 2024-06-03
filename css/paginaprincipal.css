@@ -5,10 +5,10 @@
     background-image: url('/img/search.png');
     background-repeat: no-repeat;
     padding-left: 30px; /* Ajustar o padding para a imagem não ficar colada no texto */
-    background-position: left center; 
+    background-position: 1.2vh; 
     background-size: 16px; /* Diminuir a imagem */
     border-radius: 15px; /* Ajustar a borda */
-    width: 20vh;
+    width: 35vh;
     height: 4vh; /* Ajustar a altura */
     box-sizing: border-box;
     display: flex;
@@ -34,9 +34,8 @@ header {
 }
 
 #EntrarBtn {
-    position: absolute;
-    right: 3%;
-    top: 10px;
+    position:absolute;
+    right: 2vh;
     padding: 8px 16px;
     border: none;
     border-radius: 15px;
@@ -58,6 +57,7 @@ header {
     font-size: 20px;
     color: #fd2b2b;
     text-decoration: none;
+    width: 75%;
 }
 
 /* SideBar */
@@ -102,15 +102,15 @@ body {
 
 .sidebar {
     position: fixed;
-    top:5px ;
+    top: 5px;
     left: 0;
     background-color: white;
-    width: 260px;
+    width: 160px; /* Largura inicial */
     height: 100%;
     z-index: 2;
     overflow-x: hidden;
     scrollbar-width: none;
-    box-shadow: 0 2px 0 6rem rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 0 6rem rgba(255, 255, 255, 0.1); 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -123,7 +123,7 @@ body {
 }
 
 .sidebar.close {
-    width: 60px;
+    width: 80px;
 }
 
 .sidebar .logo {
@@ -137,48 +137,76 @@ body {
 }
 
 .sidebar .logo img {
-    width: 100%;
-    margin: 1rem 0;
+    width: 75%;
+    margin: 0 10px;
+    position: absolute;
+    top: 5%;
+    display: none; /* Esconder logo por padrão */
 }
 
-.sidebar .side-menu {
+.sidebar .side-menu,
+.sidebar .bottom-menu {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espaço entre os itens do menu */
+    gap: 5px; /* Espaço entre os itens do menu */
     padding: 0 10px;
 }
 
-.sidebar .side-menu li {
+.sidebar .side-menu li,
+.sidebar .bottom-menu li {
     margin: 0.5rem 0;
     height: 3rem;
     background-color: transparent;
     padding: 0 10px;
     border: 1px solid transparent;
+    display: flex;
+    align-items: center;
 }
 
-.sidebar .side-menu li.active {
+.sidebar .side-menu li.active,
+.sidebar .bottom-menu li.active {
     border-left: #181a1e 6px solid;
     background: var(--dark);
-    transition: all 0.3s ease-in;  
+    transition: all 0.3s ease-in;
 }
 
-.sidebar .side-menu li a {
+.sidebar .side-menu li a,
+.sidebar .bottom-menu li a {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     font-size: 1.2rem;
     white-space: nowrap;
-    color: #000; /* Cor do texto */
+    color: #000;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
-.sidebar .side-menu li a:hover {
-    background-color: #ffffff; /* Cor de fundo ao passar o mouse */
+.sidebar .side-menu li a i,
+.sidebar .bottom-menu li a i {
+    min-width: 40px; /* Largura mínima dos ícones */
+}
+
+.sidebar .side-menu li a span,
+.sidebar .bottom-menu li a span {
+    display: none; /* Esconder o texto por padrão */
+}
+
+.sidebar:hover .side-menu li a span,
+.sidebar:hover .bottom-menu li a span {
+    display: inline; /* Mostrar o texto ao passar o mouse */
+    margin-left: 10px;
+}
+
+.sidebar .side-menu li a:hover,
+.sidebar .bottom-menu li a:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
     border: 1px solid #000; /* Borda ao passar o mouse */
 }
 
 .sidebar .bottom-menu {
-    margin-top: auto;
+    margin-top: 25%;
     padding: 0 10px;
 }
 
@@ -203,4 +231,8 @@ body {
 .sidebar .bottom-menu li a:hover {
     background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
     border: 1px solid #000; /* Borda ao passar o mouse */
+}
+
+.sidebar .side-menu li a {
+    font-size: 12px;
 }
