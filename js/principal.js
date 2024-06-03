@@ -3,7 +3,8 @@ const sidebar = document.querySelector('.sidebar');
 const toggleDarkLight = document.getElementById('toggleDarkLight');
 const body = document.body;
 const logoImg = document.querySelector('.sidebar .logo img');
-const isUserLoggedIn = document.getElementById('usuariologado')
+const isUserLoggedIn = document.getElementById('usuarioLogado');
+const logoutButton = document.querySelector('.bottom-menu .bx-log-out-circle');
 
 // Handle sidebar hover to expand and collapse
 sidebar.addEventListener('mouseenter', () => {
@@ -31,17 +32,19 @@ function updateMode() {
 
 function isAutenticated() {
     if (!localStorage.getItem('user')) {
-        window.location.href = "index.html"
+        window.location.href = "index.html";
     }
 }
 
 function init() {
-    nextID = findNextId()
-    isUserLoggedIn.innerHTML = `Bem vindo, ${localStorage.getItem('user')}`
+    isAutenticated();
+    isUserLoggedIn.innerHTML = `Olá, ${localStorage.getItem('user')}`;
 }
 
-init()
+logoutButton.addEventListener('click', () => {
+    localStorage.removeItem('user');
+    window.location.href = "../index.html"; // Atualizado para apontar para o index.html fora do diretório pages
+});
+
+init();
 updateMode();
-
-
-/*/ Path: js/principal.js */

@@ -16,7 +16,7 @@ const mobileSignupBtn = document.getElementById('mobile-signup');
 const userList = document.getElementById('userList');
 const registeredUsers = document.getElementById('registeredUsers');
 const deleteUsersBtn = document.getElementById('deleteUsers');
-const isUserLoggedIn = document.querySelector('#usuario-logado')
+const isUserLoggedIn = document.querySelector('#usuario-logado');
 
 function toggleDisplay(element, state) {
     element.style.display = state;
@@ -86,7 +86,7 @@ async function login() {
         localStorage.setItem('user', username);
         resetFormLogin();
         alert("Login bem sucedido");
-        window.location.href = 'pages/principal.html'
+        window.location.href = "pages/principal.html"; // Caminho atualizado
     } else {
         localStorage.removeItem('user');
         resetFormLogin();
@@ -119,7 +119,6 @@ function showUserList() {
     toggleDisplay(container, 'none');
     loadRegisteredUsers();
 }
-
 
 deleteUsersBtn.addEventListener('click', deleteAllUsers);
 logoutBtn.addEventListener('click', logout);
