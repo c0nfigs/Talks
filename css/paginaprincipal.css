@@ -40,28 +40,28 @@ body.dark {
 
 /* Header */
 header {
-    background-color: #ffffff;
+    background-color: var(--header-background-light);
     padding: 20px 0;
     position: fixed;
     width: 100%;
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center;
     padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
 }
 
 .search-input {
     background-image: url('/img/search.png');
     background-repeat: no-repeat;
-    padding-left: 30px; /* Ajustar o padding para a imagem não ficar colada no texto */
+    padding-left: 30px;
     background-position: 1.2vh; 
-    background-size: 16px; /* Diminuir a imagem */
-    border-radius: 15px; /* Ajustar a borda */
+    background-size: 16px;
+    border-radius: 15px;
     width: 18rem;
-    height: 4vh; /* Ajustar a altura */
+    height: 4vh;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -69,7 +69,7 @@ header {
 }
 
 .search-input::placeholder {
-    text-align: left; /* Alinhar o texto à esquerda */
+    text-align: left;
 }
 
 #usuarioLogado {
@@ -77,7 +77,7 @@ header {
     right: 2vh;
     padding: 8px 16px;
     border: none;
-    color: #000000;
+    color: var(--text-color-light);
     font-size: 14px;
     cursor: pointer;
 }
@@ -87,7 +87,7 @@ header {
     right: 80px;
     top: 14px;
     font-size: 20px;
-    color: #fd2b2b;
+    color: var(--button-background-light);
     text-decoration: none;
     width: 75%;
 }
@@ -100,16 +100,16 @@ header {
 }
 
 .bx {
-    font-size: 1.7rem; /* Ajustar o tamanho do ícone */
+    font-size: 1.7rem;
 }
 
 a {
-    text-decoration: none; /* Remover o sublinhado das tags A */
-    color: #000; /* Cor do texto */
+    text-decoration: none;
+    color: var(--text-color-light);
 }
 
 .dhc {
-    width: 10rem; /* Ajuste este valor para o tamanho desejado */
+    width: 10rem;
 }
 
 li {
@@ -137,17 +137,16 @@ body {
     z-index: 2;
     overflow-x: hidden;
     scrollbar-width: none;
-    box-shadow: 0 2px 0 6rem rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-size: 24px;
     transition: width 0.3s ease, background-color 0.3s;
-    padding-top: 4rem; /* Adiciona espaço abaixo do header */
+    padding-top: 4rem;
 }
 
 .sidebar:hover {
-    width: 12rem; /* Largura completa ao passar o mouse */
+    width: 12rem;
 }
 
 .sidebar.close {
@@ -158,7 +157,7 @@ body {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
-    color: var(--dark);        
+    color: var(--text-color-light);        
     z-index: 1;
     font-weight: 700;
     padding: 0 10px;
@@ -168,7 +167,7 @@ body {
 .sidebar .bottom-menu {
     display: flex;
     flex-direction: column;
-    gap: 5px; /* Espaço entre os itens do menu */
+    gap: 5px;
     padding: 0 10px;
 }
 
@@ -185,8 +184,8 @@ body {
 
 .sidebar .side-menu li.active,
 .sidebar .bottom-menu li.active {
-    border-left: #000000 6px solid;
-    background: var(--dark);
+    border-left: var(--text-color-light) 6px solid;
+ 
     transition: all 0.3s ease-in;
 }
 
@@ -198,44 +197,43 @@ body {
     align-items: center;
     font-size: 1.2rem;
     white-space: nowrap;
-    color: #000;
+    color: var(--text-color-light);
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
 
 .sidebar .side-menu li a i,
 .sidebar .bottom-menu li a i {
-    min-width: 40px; /* Largura mínima dos ícones */
+    min-width: 40px;
 }
 
 .sidebar .side-menu li a span,
 .sidebar .bottom-menu li a span {
-    display: none; /* Esconder o texto por padrão */
+    display: none;
 }
 
 .sidebar:hover .side-menu li a span,
 .sidebar:hover .bottom-menu li a span {
-    display: inline; /* Mostrar o texto ao passar o mouse */
+    display: inline;
     margin-left: 10px;
 }
 
 .sidebar .side-menu li a:hover,
 .sidebar .bottom-menu li a:hover {
-    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
-    border: 1px solid #000; /* Borda ao passar o mouse */
+    border: 1px solid var(--text-color-light);
 }
 
 body.dark .sidebar .side-menu li a:hover,
 body.dark .sidebar .bottom-menu li a:hover {
-    background-color: #ffffff; /* Cor de fundo ao passar o mouse */
-    border: 1px solid #ffffff; /* Borda ao passar o mouse */
+    background-color: var(--background-color-light);
+    border: 1px solid var(--background-color-light);
 }
 
 .sidebar .bottom-menu {
-    margin-top: auto; /* Garante que o bottom-menu fique na parte inferior */
-    padding-left: 10px; /* Alinha o bottom-menu à esquerda */
-    padding-right: 10px; /* Mantém padding horizontal consistente */
-    padding-bottom: 2px; /* Espaço extra abaixo do bottom-menu */
+    margin-top: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
 }
 
 .sidebar .bottom-menu li {
@@ -254,12 +252,12 @@ body.dark .sidebar .bottom-menu li a:hover {
     align-items: center;
     font-size: 1.2rem;
     white-space: nowrap;
-    color: #000; /* Cor do texto */
+    color: var(--text-color-light);
 }
 
 .sidebar .bottom-menu li a:hover {
-    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
-    border: 1px solid #000; /* Borda ao passar o mouse */
+    background-color: var(--background-color-light);
+    border: 1px solid var(--text-color-light);
 }
 
 .sidebar .side-menu li a {
@@ -278,152 +276,128 @@ body.dark .sidebar .bottom-menu li a:hover {
     text-shadow: 0.5vh 0.5vh 1vh rgb(0, 0, 0); 
 }
 
-#img1{
+#img1, #img2, #img3, #img4,
+#img5, #img6, #img7, #img8,
+#img9, #img10, #img11, #img12,
+#prova1, #prova2, #prova3, #prova4, #prova5, #prova6 {
     width: 16rem;
-    position: absolute; 
-    top: 24vh;
-    left: 10vh;
+    position: absolute;
 }
 
-#img2{
-    width: 16rem;
-    position: absolute; 
-    top: 24vh;
-    left: 54vh;
+#img1 { top: 24vh; left: 10vh; }
+#img2 { top: 24vh; left: 54vh; }
+#img3 { top: 24vh; left: 98vh; }
+#img4 { top: 24vh; left: 142vh; }
+#img5 { top: 54vh; left: 10vh; }
+#img6 { top: 54vh; left: 54vh; }
+#img7 { top: 54vh; left: 98vh; }
+#img8 { top: 54vh; left: 142vh; }
+#img9 { top: 84vh; left: 10vh; }
+#img10 { top: 84vh; left: 54vh; }
+#img11 { top: 84vh; left: 98vh; }
+#img12 { top: 84vh; left: 142vh; }
+#prova1 { top: 20vh; left: 10vh; }
+#prova2 { top: 20vh; left: 55vh; }
+#prova3 { top: 20vh; left: 100vh; }
+#prova4 { top: 20vh; left: 145vh; }
+#prova5 { top: 20vh; left: 190vh; }
+#prova6 { top: 25vh; left: 10vh; }
+#bio { top: 14vh; left: 57vh; position: absolute;}
+#chat { top: 8vh; left: 30vh; position: absolute;}
+
+.publicacoes-quadrado {
+    width: 80%;
+    height: 80vh;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
 }
 
-#img3{
-    width: 16rem;
-    position: absolute; 
-    top: 24vh;
-    left: 98vh;
+.publicacoes-quadrado p {
+    font-size: 1.2rem;
+    color: var(--text-color-light);
+    text-align: center;
 }
 
-#img4{
-    width: 16rem;
-    position: absolute; 
-    top: 24vh;
-    left: 142vh;
+.configuracoes-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: absolute;
+    top: 15%;
+    left: 42%;
+    padding: 80px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#img5{
-    width: 16rem;
-    position: absolute; 
-    top: 54vh;
-    left: 10vh;
+.configuracoes-form {
+    display: flex;
+    flex-direction: column;
 }
 
-#img6{
-    width: 16rem;
-    position: absolute; 
-    top: 54vh;
-    left: 54vh;
+.form-group {
+    margin-bottom: 15px;
 }
 
-#img7{
-    width: 16rem;
-    position: absolute; 
-    top: 54vh;
-    left: 98vh;
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-#img8{
-    width: 16rem;
-    position: absolute; 
-    top: 54vh;
-    left: 142vh;
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-#img9{
-    width: 16rem;
-    position: absolute; 
-    top: 84vh;
-    left: 10vh;
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
 }
 
-#img10{
-    width: 16rem;
-    position: absolute; 
-    top: 84vh;
-    left: 54vh;
+button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#img11{
-    width: 16rem;
-    position: absolute; 
-    top: 84vh;
-    left: 98vh;
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
-#img12{
-    width: 16rem;
-    position: absolute; 
-    top: 84vh;
-    left: 142vh;
-}
-
-#prova1{
-    width: 16rem;
-    position: absolute; 
-    top: 20vh;
-    left: 10vh;
-}
-
-#prova2{
-    width: 16rem;
-    position: absolute; 
-    top: 20vh;
-    left: 55vh;
-}
-
-#prova3{
-    width: 16rem;
-    position: absolute; 
-    top: 20vh;
-    left: 100vh;
-}
-
-#prova4{
-    width: 16rem;
-    position: absolute; 
-    top: 20vh;
-    left: 145vh;
-}
-
-#prova5{
-    width: 16rem;
-    position: absolute; 
-    top: 20vh;
-    left: 190vh;
-}
-
-#prova6{
-    width: 16rem;
-    position: absolute; 
-    top: 25vh;
-    left: 10vh;
-}
 /* Media queries para responsividade */
 @media (max-width: 768px) {
     .sidebar .side-menu li a,
     .sidebar .bottom-menu li a {
-        font-size: 0.9rem; /* Diminuir o tamanho do texto ainda mais para telas menores */
+        font-size: 0.9rem;
     }
 
     .sidebar .side-menu li a i,
     .sidebar .bottom-menu li a i {
-        font-size: 1.2rem; /* Diminuir o tamanho dos ícones ainda mais para telas menores */
+        font-size: 1.2rem;
     }
+
 }
 
 @media (max-width: 480px) {
     .sidebar .side-menu li a,
     .sidebar .bottom-menu li a {
-        font-size: 0.8rem; /* Diminuir o tamanho do texto ainda mais para telas muito pequenas */
+        font-size: 0.8rem;
     }
 
     .sidebar .side-menu li a i,
     .sidebar .bottom-menu li a i {
-        font-size: 1rem; /* Diminuir o tamanho dos ícones ainda mais para telas muito pequenas */
+        font-size: 1rem;
     }
 }

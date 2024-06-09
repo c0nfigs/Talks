@@ -48,13 +48,18 @@
         <div id="principal" class="section active">
             <h1>Bem-vindo à Página Principal</h1>
             <p>Conteúdo da página principal.</p>
+            <!-- Novo quadrado branco com bordas arredondadas -->
+            <div class="publicacoes-quadrado">
+                <p>As publicações estarão aqui</p>
+            </div>
         </div>
+        
         <div id="aulas" class="section">
-            <p id= "tituloaula" style="color: rgb(141, 0, 0);position: absolute; TOP: 10vh; left: 10vh;font-size:40px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, serif;">AULAS POR PERÍODO</p>
-            <p style="color: rgb(0, 0, 0);position: absolute; TOP: 20vh; left: 10vh;font-size:15px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, serif;">AULAS DE WEB FRONT.</p>
-            <p style="color: rgb(0, 0, 0);position: absolute; TOP: 50vh; left: 10vh;font-size:15px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, serif;">AULAS DE DESENVOLVIMENTO DE JOGOS.</p>
-            <p style="color: rgb(0, 0, 0);position: absolute; TOP: 80vh; left: 10vh;font-size:15px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, serif;">AULAS DE AEDI.</p>
-            <img id="img1" src="/img/aula1.jpg" alt="" >
+            <p id="tituloaula" style="color: rgb(141, 0, 0); position: absolute; TOP: 10vh; left: 10vh; font-size: 40px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, serif;">AULAS POR PERÍODO</p>
+            <p style="color: rgb(0, 0, 0); position: absolute; TOP: 20vh; left: 10vh; font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, serif;">AULAS DE WEB FRONT.</p>
+            <p style="color: rgb(0, 0, 0); position: absolute; TOP: 50vh; left: 10vh; font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, serif;">AULAS DE DESENVOLVIMENTO DE JOGOS.</p>
+            <p style="color: rgb(0, 0, 0); position: absolute; TOP: 80vh; left: 10vh; font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, serif;">AULAS DE AEDI.</p>
+            <img id="img1" src="/img/aula1.jpg" alt="">
             <img id="img2" src="/img/aula2.jpg" alt="">
             <img id="img3" src="/img/aula3.jpg" alt="">
             <img id="img4" src="/img/aula4.jpg" alt="">
@@ -68,12 +73,12 @@
             <img id="img12" src="/img/aula11.png" alt="">
         </div>
         <div id="chat" class="section">
-            <h1>Chat</h1>
-            <p>Conteúdo do chat.</p>
+            
+            <img id="chat" src="/img/chat.jpg" alt="">
         </div>
         <div id="provas" class="section">
-            <p id= "tituloaula" style="color: rgb(141, 0, 0);position: absolute; TOP: 10vh; left: 10vh;font-size:40px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, serif;">PROVAS POR PERÍODO</p>
-            <img id="prova1" src="/img/PROVA1.jpg" alt="" >
+            <p id="tituloaula" style="color: rgb(141, 0, 0); position: absolute; TOP: 10vh; left: 10vh; font-size: 40px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, serif;">PROVAS POR PERÍODO</p>
+            <img id="prova1" src="/img/PROVA1.jpg" alt="">
             <img id="prova2" src="/img/PROVA2.jpg" alt="">
             <img id="prova3" src="/img/PROVA3.jpg" alt="">
             <img id="prova4" src="/img/PROVA4.jpg" alt="">
@@ -82,11 +87,40 @@
         </div>
         <div id="users" class="section">
             <h1>Usuários</h1>
-            <p>Conteúdo dos usuários.</p>
+            <img id="bio" src="/img/bio.jpg" alt="">
         </div>
         <div id="settings" class="section">
             <h1>Configurações</h1>
-            <p>Conteúdo das configurações.</p>
+            <div class="configuracoes-container">
+                <form class="configuracoes-form">
+                    <div class="form-group">
+                        <label for="username">Nome de Usuário</label>
+                        <input type="text" id="username" placeholder="Digite seu nome de usuário">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Digite seu email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Altere sua senha</label>
+                        <input type="password" id="password" placeholder="Digite sua senha">
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Mude seu idioma</label>
+                        <select id="language">
+                            <option value="pt">Português</option>
+                            <option value="en">Inglês</option>
+                            <option value="es">Espanhol</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notifications">Notificações</label>
+                        <input type="checkbox" id="notifications">
+                        <label for="notifications">Ativar Notificações</label>
+                    </div>
+                    <button type="submit">Salvar Configurações</button>
+                </form>
+            </div>
         </div>
     </div>
 
