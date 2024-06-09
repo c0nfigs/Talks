@@ -164,14 +164,6 @@ body {
     padding: 0 10px;
 }
 
-.sidebar .logo img {
-    width: 75%;
-    margin: 0 10px;
-    position: absolute;
-    top: 1.25rem;
-    display: none; /* Esconder logo por padrão */
-}
-
 .sidebar .side-menu,
 .sidebar .bottom-menu {
     display: flex;
@@ -274,6 +266,143 @@ body.dark .sidebar .bottom-menu li a:hover {
     font-size: 16px;
 }
 
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+#tituloaula{
+    text-shadow: 0.5vh 0.5vh 1vh rgb(0, 0, 0); 
+}
+
+#img1{
+    width: 16rem;
+    position: absolute; 
+    top: 24vh;
+    left: 10vh;
+}
+
+#img2{
+    width: 16rem;
+    position: absolute; 
+    top: 24vh;
+    left: 54vh;
+}
+
+#img3{
+    width: 16rem;
+    position: absolute; 
+    top: 24vh;
+    left: 98vh;
+}
+
+#img4{
+    width: 16rem;
+    position: absolute; 
+    top: 24vh;
+    left: 142vh;
+}
+
+#img5{
+    width: 16rem;
+    position: absolute; 
+    top: 54vh;
+    left: 10vh;
+}
+
+#img6{
+    width: 16rem;
+    position: absolute; 
+    top: 54vh;
+    left: 54vh;
+}
+
+#img7{
+    width: 16rem;
+    position: absolute; 
+    top: 54vh;
+    left: 98vh;
+}
+
+#img8{
+    width: 16rem;
+    position: absolute; 
+    top: 54vh;
+    left: 142vh;
+}
+
+#img9{
+    width: 16rem;
+    position: absolute; 
+    top: 84vh;
+    left: 10vh;
+}
+
+#img10{
+    width: 16rem;
+    position: absolute; 
+    top: 84vh;
+    left: 54vh;
+}
+
+#img11{
+    width: 16rem;
+    position: absolute; 
+    top: 84vh;
+    left: 98vh;
+}
+
+#img12{
+    width: 16rem;
+    position: absolute; 
+    top: 84vh;
+    left: 142vh;
+}
+
+#prova1{
+    width: 16rem;
+    position: absolute; 
+    top: 20vh;
+    left: 10vh;
+}
+
+#prova2{
+    width: 16rem;
+    position: absolute; 
+    top: 20vh;
+    left: 55vh;
+}
+
+#prova3{
+    width: 16rem;
+    position: absolute; 
+    top: 20vh;
+    left: 100vh;
+}
+
+#prova4{
+    width: 16rem;
+    position: absolute; 
+    top: 20vh;
+    left: 145vh;
+}
+
+#prova5{
+    width: 16rem;
+    position: absolute; 
+    top: 20vh;
+    left: 190vh;
+}
+
+#prova6{
+    width: 16rem;
+    position: absolute; 
+    top: 25vh;
+    left: 10vh;
+}
 /* Media queries para responsividade */
 @media (max-width: 768px) {
     .sidebar .side-menu li a,
