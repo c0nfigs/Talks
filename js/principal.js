@@ -4,20 +4,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     sidebarItems.forEach(item => {
         item.addEventListener('click', function () {
-            // Remove a classe 'active' de todos os itens da sidebar e seções
+            
             sidebarItems.forEach(i => i.classList.remove('active'));
             sections.forEach(section => section.classList.remove('active'));
 
-            // Adiciona a classe 'active' ao item da sidebar clicado
+            
             this.classList.add('active');
 
-            // Mostra a seção correspondente
+           
             const sectionId = this.getAttribute('data-section');
             document.getElementById(sectionId).classList.add('active');
         });
     });
 
-    // Outros scripts existentes...
+    
     const sidebar = document.querySelector('.sidebar');
     const toggleDarkLight = document.getElementById('toggleDarkLight');
     const body = document.body;
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function isAuthenticated() {
         if (!localStorage.getItem('user')) {
-            window.location.href = "../index.html"; // Caminho atualizado
+            window.location.href = "../index.html"; 
         }
     }
 
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     logoutButton.addEventListener('click', () => {
         localStorage.removeItem('user');
-        window.location.href = "../index.html"; // Caminho atualizado
+        window.location.href = "../index.html"; 
     });
 
     init();

@@ -1,4 +1,4 @@
-// Cache DOM elements for performance
+
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
@@ -15,7 +15,6 @@ function toggleDisplay(element, state) {
     element.style.display = state;
 }
 
-// SignUp
 function storeUser(username, password) {
     const users = JSON.parse(localStorage.getItem('users')) || [];
     users.push({ username, password });
@@ -55,7 +54,7 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-// SignIn
+
 function userIsAuthenticated() {
     const username = fieldUser.value;
     const password = fieldPassword.value;
